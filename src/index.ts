@@ -6,6 +6,10 @@ import { performAstCodegen } from "@src/codegen";
 dotenv.config();
 
 const server = new ApolloServer({
+  cors: {
+    origin: "*",
+    credentials: true
+  },
   schema,
 });
 
