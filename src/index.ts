@@ -8,9 +8,10 @@ dotenv.config();
 const server = new ApolloServer({
   cors: {
     origin: "*",
-    credentials: true
+    credentials: true,
   },
   schema,
+  introspection: true
 });
 
 performAstCodegen();
